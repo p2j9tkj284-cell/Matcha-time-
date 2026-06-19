@@ -188,19 +188,32 @@
   const matcha = document.getElementById('comparatif-matcha');
   const divider = document.getElementById('comparatif-divider');
   const slider = document.getElementById('comparatif-slider');
+  let dragging = false;
 
-  function updateSliderOnScroll() {
-    const rect = slider.getBoundingClientRect();
-    const vh = window.innerHeight;
-    const progress = 1 - (rect.top + rect.height / 2) / (vh + rect.height);
-    const pct = Math.min(100, Math.max(0, progress * 100));
+  function setSlider(pct) {
+    pct = Math.min(100, Math.max(0, pct));
     matcha.style.clipPath = `inset(0 ${100 - pct}% 0 0)`;
     divider.style.left = `${pct}%`;
   }
 
-  window.addEventListener('scroll', updateSliderOnScroll, { passive: true });
-  window.addEventListener('resize', updateSliderOnScroll);
-  updateSliderOnScroll();
+  function moveFromEvent(clientX) {
+    const rect = slider.getBoundingClientRect();
+    const pct = ((clientX - rect.left) / rect.width) * 100;
+    setSlider(pct);
+  }
+
+  slider.addEventListener('pointerdown', (e) => {
+    dragging = true;
+    moveFromEvent(e.clientX);
+  });
+
+  window.addEventListener('pointermove', (e) => {
+    if (dragging) moveFromEvent(e.clientX);
+  });
+
+  window.addEventListener('pointerup', () => { dragging = false; });
+
+  setSlider(50);
 </script>
 
 </body>

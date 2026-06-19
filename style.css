@@ -347,6 +347,8 @@ a {
   overflow: hidden;
   flex-shrink: 0;
   box-shadow: 0 4px 30px rgba(0,0,0,0.1);
+  cursor: ew-resize;
+  touch-action: none;
 }
 
 .comparatif-img {
@@ -357,13 +359,12 @@ a {
 }
 
 .comparatif-img-cafe {
-  background-image: url('https://images.unsplash.com/photo-1559056199-641a0ac8b55e?auto=format&fit=crop&w=600&q=80');
+  background-image: url('https://images.unsplash.com/photo-1497935586351-b67a49e012bf?auto=format&fit=crop&w=600&q=80');
 }
 
 .comparatif-img-matcha {
-  background-image: url('https://images.unsplash.com/photo-1536256263959-770b48d82b0a?auto=format&fit=crop&w=600&q=80');
+  background-image: url('https://images.unsplash.com/photo-1582793988951-9aed5509eb97?auto=format&fit=crop&w=600&q=80');
   clip-path: inset(0 50% 0 0);
-  transition: clip-path 0.05s linear;
 }
 
 .comparatif-divider {
