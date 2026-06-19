@@ -1,5 +1,6 @@
 :root {
   --vert: #4A6B3D;
+  --rose: #E8A0BF;
   --creme: #F5F0E6;
   --noir: #1C1C1C;
   --accent-vanille: #C9A66B;
@@ -18,7 +19,7 @@ body {
   line-height: 1.6;
 }
 
-h1, h2, h3, .wordmark {
+h1, h2, h3 {
   font-family: 'Fraunces', serif;
 }
 
@@ -32,38 +33,72 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.5rem 6%;
+  padding: 1.2rem 6%;
+  background-color: var(--creme);
 }
 
+/* Wordmark : reprend le style script vert/rose du logo, mais à plat */
 .wordmark {
-  font-size: 1.8rem;
-  font-weight: 600;
+  font-family: 'Baloo 2', sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
   color: var(--vert);
+  -webkit-text-stroke: 2px var(--rose);
+  paint-order: stroke fill;
+}
+
+.wordmark .dot {
+  color: var(--rose);
+  -webkit-text-stroke: 0;
+}
+
+.site-header nav {
+  display: flex;
+  gap: 2rem;
 }
 
 .site-header nav a {
-  margin-left: 2rem;
   font-size: 0.95rem;
+  font-weight: 500;
 }
 
-.btn-nav {
+.btn-panier {
   background-color: var(--vert);
   color: var(--creme) !important;
-  padding: 0.5rem 1.2rem;
+  padding: 0.5rem 1.3rem;
   border-radius: 999px;
+  font-weight: 600;
 }
 
-/* Hero */
+/* Hero avec photo de fond */
 .hero {
+  position: relative;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
-  padding: 6rem 6% 5rem;
+  background-image: url('https://images.unsplash.com/photo-1536256263959-770b48d82b0a?auto=format&fit=crop&w=1600&q=80');
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(28,28,28,0.55), rgba(28,28,28,0.45));
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
   max-width: 700px;
-  margin: 0 auto;
+  padding: 2rem 6%;
+  color: var(--creme);
 }
 
 .hero h1 {
   font-size: 2.6rem;
-  color: var(--vert);
   margin-bottom: 1rem;
 }
 
@@ -91,16 +126,41 @@ a {
   margin-top: 1rem;
 }
 
+/* Bienfaits */
+.bienfaits {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 3rem 6%;
+  text-align: center;
+}
+
+.bienfait {
+  max-width: 180px;
+}
+
+.bienfait-icone {
+  font-size: 2rem;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.bienfait p {
+  font-size: 0.9rem;
+}
+
 /* Produits */
 .produits {
   padding: 4rem 6%;
   text-align: center;
 }
 
-.produits h2 {
+.produits h2, .avis h2, .quest-ce-que h2, .preparation h2, .comparatif h2, .etudes h2, .faq h2 {
   font-size: 2rem;
   color: var(--vert);
   margin-bottom: 2.5rem;
+  text-align: center;
 }
 
 .produits-grid {
@@ -130,18 +190,12 @@ a {
   font-size: 1.2rem;
 }
 
-.produit-nature {
-  background-color: var(--vert);
-}
-
-.produit-vanille {
-  background-color: var(--accent-vanille);
-}
+.produit-nature { background-color: var(--vert); }
+.produit-vanille { background-color: var(--accent-vanille); }
 
 .produit-card h3 {
   font-size: 1.3rem;
   margin-bottom: 0.6rem;
-  color: var(--noir);
 }
 
 .produit-desc {
@@ -162,23 +216,155 @@ a {
   color: var(--noir);
 }
 
-/* Histoire */
-.histoire {
+/* Avis clients */
+.avis {
   background-color: var(--vert);
   color: var(--creme);
   padding: 4rem 6%;
-  max-width: 800px;
-  margin: 0 auto;
-  border-radius: 20px;
 }
 
-.histoire h2 {
-  margin-bottom: 1.5rem;
+.avis h2 { color: var(--creme); }
+
+.avis-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
 }
 
-.histoire p {
+.avis-card {
+  background: rgba(255,255,255,0.08);
+  border-radius: 12px;
+  padding: 1.5rem;
+  max-width: 220px;
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
+/* Qu'est-ce que le matcha */
+.quest-ce-que {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2.5rem;
+  padding: 4rem 6%;
+}
+
+.quest-ce-que-photo {
+  flex: 1 1 280px;
+  min-height: 260px;
+  border-radius: 16px;
+  background-image: url('https://images.unsplash.com/photo-1515823064-d6e0c04616a7?auto=format&fit=crop&w=800&q=80');
+  background-size: cover;
+  background-position: center;
+}
+
+.quest-ce-que-texte {
+  flex: 1 1 280px;
+}
+
+.quest-ce-que-texte p {
   margin-bottom: 1rem;
-  font-size: 1rem;
+}
+
+/* Préparation */
+.preparation {
+  padding: 4rem 6%;
+  text-align: center;
+}
+
+.etapes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.etape {
+  max-width: 180px;
+}
+
+.etape-numero {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--vert);
+  color: var(--creme);
+  font-weight: 600;
+  margin-bottom: 0.8rem;
+}
+
+.etape p {
+  font-size: 0.9rem;
+}
+
+/* Comparatif matcha/café */
+.comparatif {
+  text-align: center;
+  padding: 4rem 6%;
+}
+
+.comparatif-cercle {
+  display: flex;
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto 2rem;
+}
+
+.comparatif-moitie {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 600;
+}
+
+.comparatif-matcha { background-color: var(--vert); }
+.comparatif-cafe { background-color: #5C3A21; }
+
+.comparatif-texte {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Études */
+.etudes {
+  background-color: var(--creme);
+  padding: 4rem 6%;
+  text-align: center;
+}
+
+.etudes p {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* FAQ */
+.faq {
+  padding: 4rem 6%;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  border-bottom: 1px solid #ddd;
+  padding: 1rem 0;
+}
+
+.faq-item summary {
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.faq-item p {
+  margin-top: 0.8rem;
+  font-size: 0.95rem;
 }
 
 /* Precommande */
@@ -205,17 +391,38 @@ a {
 
 /* Footer */
 .site-footer {
+  position: relative;
   text-align: center;
-  padding: 2rem 6%;
-  font-size: 0.85rem;
-  color: #777;
+  padding: 3rem 6% 2rem;
+  background-color: var(--vert);
+  color: var(--creme);
+  overflow: hidden;
+}
+
+.footer-wave {
+  position: absolute;
+  top: -1px;
+  left: 0;
+  right: 0;
+  height: 30px;
+  background-color: var(--creme);
+  clip-path: polygon(0% 100%, 5% 0%, 10% 100%, 15% 0%, 20% 100%, 25% 0%, 30% 100%, 35% 0%, 40% 100%, 45% 0%, 50% 100%, 55% 0%, 60% 100%, 65% 0%, 70% 100%, 75% 0%, 80% 100%, 85% 0%, 90% 100%, 95% 0%, 100% 100%);
+}
+
+.footer-wordmark {
+  font-family: 'Baloo 2', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-top: 1rem;
 }
 
 .mentions {
   margin-top: 0.5rem;
+  font-size: 0.85rem;
+  opacity: 0.85;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 700px) {
   .site-header {
     flex-direction: column;
     gap: 1rem;

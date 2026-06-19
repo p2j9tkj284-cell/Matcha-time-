@@ -5,28 +5,52 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Yokoi — Matcha premium du Japon</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600&family=Baloo+2:wght@600;700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header class="site-header">
-  <div class="wordmark">Yokoi</div>
+  <div class="wordmark">Yokoi<span class="dot">.</span></div>
   <nav>
-    <a href="#produits">Nos matcha</a>
-    <a href="#histoire">Notre histoire</a>
-    <a href="#precommande" class="btn-nav">Précommander</a>
+    <a href="#accueil">Accueil</a>
+    <a href="#produits">Produits</a>
+    <a href="#faq">FAQ</a>
+    <a href="#contact">Contact</a>
   </nav>
+  <a href="#precommande" class="btn-panier">Panier</a>
 </header>
 
-<section class="hero">
-  <h1>Le matcha japonais, sans détour.</h1>
-  <p class="hero-sub">Cultivé à Kagoshima, conditionné avec soin. Deux références pour commencer : nature, et vanille bourbon de Madagascar.</p>
-  <a href="#precommande" class="btn-primary">Je précommande</a>
+<section id="accueil" class="hero">
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <h1>Le matcha qui met tout le monde d'accord.</h1>
+    <p class="hero-sub">Cultivé à Kagoshima, conditionné avec soin. Deux références pour commencer : nature, et vanille bourbon de Madagascar.</p>
+    <a href="#precommande" class="btn-primary">Je précommande</a>
+  </div>
+</section>
+
+<section class="bienfaits">
+  <div class="bienfait">
+    <span class="bienfait-icone">🧘</span>
+    <p>Réduit le stress et l'anxiété</p>
+  </div>
+  <div class="bienfait">
+    <span class="bienfait-icone">🔥</span>
+    <p>Aide à la combustion des graisses</p>
+  </div>
+  <div class="bienfait">
+    <span class="bienfait-icone">✨</span>
+    <p>Anti-vieillissement pour la peau</p>
+  </div>
+  <div class="bienfait">
+    <span class="bienfait-icone">🧠</span>
+    <p>Améliore la mémoire et la concentration</p>
+  </div>
 </section>
 
 <section id="produits" class="produits">
-  <h2>Nos matcha</h2>
+  <h2>Produit</h2>
   <div class="produits-grid">
 
     <article class="produit-card">
@@ -48,18 +72,64 @@
   </div>
 </section>
 
-<section id="histoire" class="histoire">
-  <h2>Notre histoire</h2>
-  <p>
-    Yokoi est née d'une envie simple : retrouver, dans une tasse, la vraie saveur du matcha japonais —
-    sans artifice, sans compromis sur la qualité. Notre matcha est cultivé à Kagoshima, une région du Japon
-    reconnue pour la douceur naturelle et l'umami équilibré de ses thés.
-  </p>
-  <p>
-    Pour notre version aromatisée, pas d'arôme de synthèse : seulement de la véritable vanille bourbon,
-    cultivée à Madagascar. Deux matcha, une même exigence : vous proposer un produit honnête, à savourer
-    chaud ou glacé, en latte comme à la traditionnelle.
-  </p>
+<section class="avis">
+  <h2>Nos clients en parlent mieux que nous</h2>
+  <div class="avis-grid">
+    <div class="avis-card">"Le meilleur matcha que j'ai testé, vraiment doux."</div>
+    <div class="avis-card">"La vanille bourbon change tout, aucune amertume."</div>
+    <div class="avis-card">"Livraison rapide et packaging soigné."</div>
+    <div class="avis-card">"Mon nouveau rituel du matin."</div>
+    <div class="avis-card">"Qualité au rendez-vous, je recommande."</div>
+  </div>
+</section>
+
+<section class="quest-ce-que">
+  <div class="quest-ce-que-photo"></div>
+  <div class="quest-ce-que-texte">
+    <h2>Qu'est-ce que le matcha ?</h2>
+    <p>Le matcha est un thé vert japonais, cultivé à l'ombre puis broyé en une fine poudre. Contrairement au thé infusé, on consomme ici la feuille entière — d'où sa richesse en nutriments et son goût umami unique.</p>
+    <p>Le nôtre est cultivé à Kagoshima, une région reconnue pour la douceur naturelle de ses thés.</p>
+  </div>
+</section>
+
+<section class="preparation">
+  <h2>Comment parfaitement préparer son matcha ?</h2>
+  <div class="etapes">
+    <div class="etape"><span class="etape-numero">1</span><p>Tamisez une cuillère de matcha dans votre bol.</p></div>
+    <div class="etape"><span class="etape-numero">2</span><p>Ajoutez un peu d'eau chaude (70-80°C).</p></div>
+    <div class="etape"><span class="etape-numero">3</span><p>Fouettez en zigzag jusqu'à obtenir une mousse fine.</p></div>
+    <div class="etape"><span class="etape-numero">4</span><p>Dégustez seul, ou allongé de lait pour un latte.</p></div>
+  </div>
+</section>
+
+<section class="comparatif">
+  <h2>Pourquoi le matcha et pas le café ?</h2>
+  <div class="comparatif-cercle">
+    <div class="comparatif-moitie comparatif-matcha">Matcha</div>
+    <div class="comparatif-moitie comparatif-cafe">Café</div>
+  </div>
+  <p class="comparatif-texte">Une énergie plus douce et progressive, sans le pic de nervosité ni le coup de fatigue du café — grâce à la L-théanine naturellement présente dans le matcha.</p>
+</section>
+
+<section class="etudes">
+  <h2>Les études le prouvent</h2>
+  <p>De nombreuses études scientifiques mettent en avant les bienfaits du matcha sur la concentration, le métabolisme et la gestion du stress, grâce à sa richesse en antioxydants et en L-théanine.</p>
+</section>
+
+<section id="faq" class="faq">
+  <h2>FAQ</h2>
+  <details class="faq-item">
+    <summary>Quel goût a votre matcha ?</summary>
+    <p>Notre matcha nature a un goût umami doux et peu amer. Notre matcha vanille est sucré naturellement grâce à la vraie vanille bourbon de Madagascar.</p>
+  </details>
+  <details class="faq-item">
+    <summary>Comment conserver le matcha ?</summary>
+    <p>À l'abri de la lumière, de l'humidité et de la chaleur, sachet bien refermé après chaque utilisation.</p>
+  </details>
+  <details class="faq-item">
+    <summary>Livrez-vous partout en France ?</summary>
+    <p>Oui, la livraison est disponible partout en France métropolitaine.</p>
+  </details>
 </section>
 
 <section id="precommande" class="precommande">
@@ -69,8 +139,9 @@
   <p class="precommande-note">Lien de paiement à venir — contactez-nous en attendant pour réserver le vôtre.</p>
 </section>
 
-<footer class="site-footer">
-  <p>Yokoi — Île d'Oléron, France</p>
+<footer id="contact" class="site-footer">
+  <div class="footer-wave"></div>
+  <p class="footer-wordmark">Yokoi</p>
   <p class="mentions">Mentions légales · CGV · Contact</p>
 </footer>
 
