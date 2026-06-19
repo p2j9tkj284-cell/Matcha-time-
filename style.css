@@ -315,10 +315,10 @@ a {
   background-position: center;
 }
 
-.etape-img-1 { background-image: url('https://images.unsplash.com/photo-1582793988951-9aed5509eb97?auto=format&fit=crop&w=400&q=80'); }
-.etape-img-2 { background-image: url('https://images.unsplash.com/photo-1556679343-c7306c1976bc?auto=format&fit=crop&w=400&q=80'); }
-.etape-img-3 { background-image: url('https://images.unsplash.com/photo-1574482620811-1aa16ffe3c82?auto=format&fit=crop&w=400&q=80'); }
-.etape-img-4 { background-image: url('https://images.unsplash.com/photo-1515823064-d6e0c04616a7?auto=format&fit=crop&w=400&q=80'); }
+.etape-img-1 { background-image: url('IMG_2511.jpeg'); }
+.etape-img-2 { background-image: url('IMG_2512.jpeg'); }
+.etape-img-3 { background-image: url('IMG_2513.jpeg'); }
+.etape-img-4 { background-image: url('IMG_2514.jpeg'); }
 
 .etape p {
   font-size: 0.9rem;
