@@ -354,8 +354,8 @@ a {
 .comparatif-img {
   position: absolute;
   inset: 0;
-  background-size: 260%;
-  background-position: center 47%;
+  background-size: 264%;
+  background-position: center;
   background-repeat: no-repeat;
 }
 
