@@ -1,0 +1,226 @@
+:root {
+  --vert: #4A6B3D;
+  --creme: #F5F0E6;
+  --noir: #1C1C1C;
+  --accent-vanille: #C9A66B;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Work Sans', sans-serif;
+  background-color: var(--creme);
+  color: var(--noir);
+  line-height: 1.6;
+}
+
+h1, h2, h3, .wordmark {
+  font-family: 'Fraunces', serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Header */
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 6%;
+}
+
+.wordmark {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--vert);
+}
+
+.site-header nav a {
+  margin-left: 2rem;
+  font-size: 0.95rem;
+}
+
+.btn-nav {
+  background-color: var(--vert);
+  color: var(--creme) !important;
+  padding: 0.5rem 1.2rem;
+  border-radius: 999px;
+}
+
+/* Hero */
+.hero {
+  text-align: center;
+  padding: 6rem 6% 5rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.hero h1 {
+  font-size: 2.6rem;
+  color: var(--vert);
+  margin-bottom: 1rem;
+}
+
+.hero-sub {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+.btn-primary {
+  display: inline-block;
+  background-color: var(--vert);
+  color: var(--creme);
+  padding: 0.9rem 2rem;
+  border-radius: 999px;
+  font-weight: 600;
+}
+
+.btn-secondary {
+  display: inline-block;
+  border: 1.5px solid var(--vert);
+  color: var(--vert);
+  padding: 0.6rem 1.5rem;
+  border-radius: 999px;
+  font-weight: 500;
+  margin-top: 1rem;
+}
+
+/* Produits */
+.produits {
+  padding: 4rem 6%;
+  text-align: center;
+}
+
+.produits h2 {
+  font-size: 2rem;
+  color: var(--vert);
+  margin-bottom: 2.5rem;
+}
+
+.produits-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2.5rem;
+}
+
+.produit-card {
+  background: white;
+  border-radius: 16px;
+  padding: 2rem;
+  max-width: 320px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+}
+
+.produit-visuel {
+  height: 160px;
+  border-radius: 12px;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Fraunces', serif;
+  color: white;
+  font-size: 1.2rem;
+}
+
+.produit-nature {
+  background-color: var(--vert);
+}
+
+.produit-vanille {
+  background-color: var(--accent-vanille);
+}
+
+.produit-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.6rem;
+  color: var(--noir);
+}
+
+.produit-desc {
+  font-size: 0.92rem;
+  margin-bottom: 1rem;
+  min-height: 60px;
+}
+
+.produit-prix {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--vert);
+}
+
+.produit-prix span {
+  font-size: 0.85rem;
+  font-weight: 400;
+  color: var(--noir);
+}
+
+/* Histoire */
+.histoire {
+  background-color: var(--vert);
+  color: var(--creme);
+  padding: 4rem 6%;
+  max-width: 800px;
+  margin: 0 auto;
+  border-radius: 20px;
+}
+
+.histoire h2 {
+  margin-bottom: 1.5rem;
+}
+
+.histoire p {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+/* Precommande */
+.precommande {
+  text-align: center;
+  padding: 5rem 6%;
+}
+
+.precommande h2 {
+  font-size: 2rem;
+  color: var(--vert);
+  margin-bottom: 1rem;
+}
+
+.precommande p {
+  margin-bottom: 1.5rem;
+}
+
+.precommande-note {
+  font-size: 0.85rem;
+  color: #777;
+  margin-top: 1rem;
+}
+
+/* Footer */
+.site-footer {
+  text-align: center;
+  padding: 2rem 6%;
+  font-size: 0.85rem;
+  color: #777;
+}
+
+.mentions {
+  margin-top: 0.5rem;
+}
+
+@media (max-width: 600px) {
+  .site-header {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .hero h1 {
+    font-size: 1.9rem;
+  }
+}
