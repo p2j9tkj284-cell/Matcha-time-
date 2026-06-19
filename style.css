@@ -354,8 +354,9 @@ a {
 .comparatif-img {
   position: absolute;
   inset: 0;
-  background-size: cover;
+  background-size: 165%;
   background-position: center;
+  background-repeat: no-repeat;
 }
 
 .comparatif-img-cafe {
