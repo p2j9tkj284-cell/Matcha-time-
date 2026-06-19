@@ -516,6 +516,15 @@ a {
   opacity: 0.85;
 }
 
+@media (max-width: 900px) {
+  .comparatif-wrap {
+    flex-direction: column;
+  }
+  .comparatif-liste {
+    text-align: center;
+  }
+}
+
 @media (max-width: 700px) {
   .site-header {
     flex-direction: column;
