@@ -95,25 +95,55 @@
 <section class="preparation">
   <h2>Comment parfaitement préparer son matcha ?</h2>
   <div class="etapes">
-    <div class="etape"><span class="etape-numero">1</span><p>Tamisez une cuillère de matcha dans votre bol.</p></div>
-    <div class="etape"><span class="etape-numero">2</span><p>Ajoutez un peu d'eau chaude (70-80°C).</p></div>
-    <div class="etape"><span class="etape-numero">3</span><p>Fouettez en zigzag jusqu'à obtenir une mousse fine.</p></div>
-    <div class="etape"><span class="etape-numero">4</span><p>Dégustez seul, ou allongé de lait pour un latte.</p></div>
+    <div class="etape">
+      <div class="etape-img etape-img-1"></div>
+      <span class="etape-numero">1</span>
+      <p>Tamisez une cuillère de matcha dans votre bol.</p>
+    </div>
+    <div class="etape">
+      <div class="etape-img etape-img-2"></div>
+      <span class="etape-numero">2</span>
+      <p>Ajoutez un peu d'eau chaude (70-80°C).</p>
+    </div>
+    <div class="etape">
+      <div class="etape-img etape-img-3"></div>
+      <span class="etape-numero">3</span>
+      <p>Fouettez en zigzag jusqu'à obtenir une mousse fine.</p>
+    </div>
+    <div class="etape">
+      <div class="etape-img etape-img-4"></div>
+      <span class="etape-numero">4</span>
+      <p>Dégustez seul, ou allongé de lait pour un latte.</p>
+    </div>
   </div>
 </section>
 
 <section class="comparatif">
   <h2>Pourquoi le matcha et pas le café ?</h2>
-  <div class="comparatif-cercle">
-    <div class="comparatif-moitie comparatif-matcha">Matcha</div>
-    <div class="comparatif-moitie comparatif-cafe">Café</div>
+  <div class="comparatif-wrap">
+    <div class="comparatif-texte comparatif-pour">
+      <h3>Le matcha</h3>
+      <p>Énergie douce et progressive grâce à la L-théanine, pas de pic de nervosité, riche en antioxydants, bon pour la concentration.</p>
+    </div>
+
+    <div class="comparatif-slider" id="comparatif-slider">
+      <div class="comparatif-img comparatif-img-cafe"></div>
+      <div class="comparatif-img comparatif-img-matcha" id="comparatif-matcha"></div>
+      <div class="comparatif-divider" id="comparatif-divider"></div>
+      <input type="range" min="0" max="100" value="50" class="comparatif-range" id="comparatif-range">
+    </div>
+
+    <div class="comparatif-texte comparatif-contre">
+      <h3>Le café</h3>
+      <p>Pic de nervosité suivi d'un coup de fatigue, peut perturber le sommeil, favorise l'acidité, effet stimulant plus brutal et moins durable.</p>
+    </div>
   </div>
-  <p class="comparatif-texte">Une énergie plus douce et progressive, sans le pic de nervosité ni le coup de fatigue du café — grâce à la L-théanine naturellement présente dans le matcha.</p>
 </section>
 
 <section class="etudes">
   <h2>Les études le prouvent</h2>
-  <p>De nombreuses études scientifiques mettent en avant les bienfaits du matcha sur la concentration, le métabolisme et la gestion du stress, grâce à sa richesse en antioxydants et en L-théanine.</p>
+  <p>Une étude publiée dans le <em>Journal of Chromatography A</em> (Weiss &amp; Anderton, 2003) a mesuré les catéchines du matcha par électrochromatographie capillaire micellaire et a révélé une teneur en EGCG — le principal antioxydant du thé vert — jusqu'à 137 fois supérieure à celle d'un thé vert classique.</p>
+  <p class="etudes-source">Weiss, D.J., &amp; Anderton, C.R. (2003). Determination of catechins in matcha green tea by micellar electrokinetic chromatography. <em>Journal of Chromatography A</em>, 1011(1–2), 173–180.</p>
 </section>
 
 <section id="faq" class="faq">
@@ -144,6 +174,21 @@
   <p class="footer-wordmark">Yokoi</p>
   <p class="mentions">Mentions légales · CGV · Contact</p>
 </footer>
+
+<script>
+  const range = document.getElementById('comparatif-range');
+  const matcha = document.getElementById('comparatif-matcha');
+  const divider = document.getElementById('comparatif-divider');
+
+  function updateSlider() {
+    const val = range.value;
+    matcha.style.clipPath = `inset(0 ${100 - val}% 0 0)`;
+    divider.style.left = `${val}%`;
+  }
+
+  range.addEventListener('input', updateSlider);
+  updateSlider();
+</script>
 
 </body>
 </html>
