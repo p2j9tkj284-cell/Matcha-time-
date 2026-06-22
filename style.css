@@ -404,6 +404,14 @@ a {
   line-height: 2;
 }
 
+.comparatif-liste li:not(.comparatif-titre)::before {
+  content: "– ";
+}
+
+.comparatif-contre {
+  text-align: right;
+}
+
 .comparatif-titre {
   font-family: 'Baloo 2', sans-serif;
   font-size: 1.2rem;
