@@ -539,15 +539,18 @@ a {
     font-size: 1.9rem;
   }
   .comparatif-wrap {
-    flex-direction: column;
+    gap: 0.6rem;
   }
   .comparatif-liste {
-    max-width: 220px;
-    font-size: 0.85rem;
-    text-align: center;
+    max-width: 110px;
+    font-size: 0.65rem;
+    line-height: 1.6;
+  }
+  .comparatif-titre {
+    font-size: 0.9rem;
   }
   .comparatif-slider {
-    width: 220px;
-    height: 220px;
+    width: 150px;
+    height: 150px;
   }
 }
